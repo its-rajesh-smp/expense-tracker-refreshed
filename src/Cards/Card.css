@@ -1,0 +1,52 @@
+.SideNavCard {
+  display: flex;
+  padding: 5px;
+  background-color: #ECF2FF;
+  margin: 20px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px -1px black;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+.SideNavCard i, .SideNavCard p {
+  padding: 10px;
+}
+
+.SideNavCard:hover {
+  background-color: rgba(133, 184, 255, 0.401);
+  transition-property: background-color;
+  transition-duration: 500ms;
+  color: #b02a58;
+}
+
+.Status_Card {
+  width: 200px;
+  height: 200px;
+  background-color: #E5D1FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+  box-shadow: 1px 1px 5px black;
+}
+
+.Status_Card-for {
+  font-size: xx-large;
+}
+
+.Status_Card-price {
+  font-size: x-large;
+}
+
+.blurCard {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  cursor: default;
+}/*# sourceMappingURL=Card.css.map */

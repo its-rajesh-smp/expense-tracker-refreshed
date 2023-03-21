@@ -1,0 +1,35 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #eae9e9;
+}
+
+.item-div--div {
+  display: flex;
+  font-size: 12px;
+  align-items: flex-end;
+  color: #4c4c4c;
+}
+.item-div--div :last-child {
+  margin-left: 5px;
+  font-size: 11px;
+}
+
+.item_Name {
+  font-weight: 500;
+}
+
+.item_Price {
+  font-weight: 500;
+}/*# sourceMappingURL=Item.css.map */
