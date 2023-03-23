@@ -3,7 +3,7 @@ import "./AddHoverBtn.css";
 
 function AddHoverBtn(props) {
   return (
-      <div onClick={props.onClick}  className="AddNew-div">+</div>
+      <div  className="AddNew-div">+</div>
   );
 }
 

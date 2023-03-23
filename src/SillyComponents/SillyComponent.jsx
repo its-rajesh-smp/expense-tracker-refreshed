@@ -42,14 +42,17 @@ function TitleWithIcon(props){
 //!==============InputFieldForAdd
 function InputFieldAddEdit(props){
 
+
+
+
     return (
         <div className="InputFieldAddEdit-div">
         <input className="InputFieldAddEdit-name" type="text" placeholder="Enter Name"   />
             <div>
                 <input className="InputFieldAddEdit-date" type="date" />
-                <input className="InputFieldAddEdit-time" type="time"   />
+                <input className="InputFieldAddEdit-time" type="time"    />
             </div>
-        <input className="InputFieldAddEdit-price" type="number" />
+        <input className="InputFieldAddEdit-price" type="number"  />
     </div>
     )
 }
