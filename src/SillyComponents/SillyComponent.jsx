@@ -56,12 +56,8 @@ function InputFieldAddEdit(props){
         price:price
     }
 
-    // Send Data to AddExpenseCard
-
-    if(props.checkIsbuttonClicked===true){props.dataTaker(NewObject)}
-    
-
-
+    // Send Data to Transection
+    if(props.checkIsbuttonClicked===true){props.grabDataOnButtonSubmit(NewObject)}
 
     return (
         <div className="InputFieldAddEdit-div">
