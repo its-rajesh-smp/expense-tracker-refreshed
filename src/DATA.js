@@ -17,7 +17,11 @@ let DATA={
 
 
 
-
+/**
+ * 2022-03-01
+ * [{"name":"T-Shirt","price":-20,"date":"2022-03-02","time":"09:08:21"},{"name":"Jeans","price":-75,"date":"2022-03-02","time":"13:16:44"},{"name":"Sneakers","price":-90,"date":"2022-03-02","time":"17:30:15"}]
+ * 
+ */
 
 
 

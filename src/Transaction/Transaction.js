@@ -10,11 +10,8 @@ import Item from "../Item/Item"
 
 function Transaction() {
 
-
-  //! Create array and Show in dom
-  let keysArray=Object.keys(DATA)
-
-
+  //! grab the keys form localStorage
+  let localKey=Object.keys(localStorage)
 
   //! State To Open AddExpenseCard
   const[setAddExpenseCard_BOOL,setAddExpenseCard_FUNC]=useState(false)
@@ -23,14 +20,17 @@ function Transaction() {
   function grabDataOnButtonSubmit(e){
     
     let checkerDate=e.date
-    // Check if that day is present in our server data or not
-    if(DATA[checkerDate]){
-    // Push To that existing data list
-      DATA[checkerDate].push(e)
+
+    // Check if that day is present in our Localserver data or not
+    if(localStorage.getItem(checkerDate)){
+    // Form A new Array/Value with the new value+existing value of localstorage to update localstorage
+      let newArrayForLocal=[...JSON.parse(localStorage.getItem(checkerDate)) , e]
+      // Updating localStorage
+      localStorage.setItem(checkerDate,JSON.stringify(newArrayForLocal))
     }
     else{
-    // Create a new datalist with that expense
-      DATA[checkerDate]=[e]
+    // Create a new datalist with that expense and store in localStorage with that key/checkerData
+      localStorage.setItem(checkerDate,JSON.stringify([e]))
     }
   }
 
@@ -47,15 +47,15 @@ function Transaction() {
       <TotalAmount amount={200} />
 
       {
-        keysArray.map((key)=>{
+        localKey.map((key)=>{
           return(
           <ItemCover date={key} key={key} >
             {
-              DATA[key].map((value)=>{
+              JSON.parse(localStorage.getItem(key)).map((value)=>{
                 return (
                   <Item
                   id={value.date+"|"+value.time}
-                  key={Math.random()}/** //todo Need To be work on it */ 
+                  key={Math.random()}/** Need To be work on it */ 
                   name={value.name}
                   date={value.date}
                   time={value.time}
