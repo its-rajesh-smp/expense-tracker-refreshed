@@ -6,7 +6,7 @@ import MainContainer from"../MainContainer/MainContainer"
 function App(){
   return (
     <div className="main_body" >
-      <Header></Header>
+      {/* <Header></Header> */}
       <MainContainer/>
     </div>
   )
