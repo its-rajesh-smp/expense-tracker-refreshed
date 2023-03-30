@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import DataSend_Context from './DataSendContext';
-
+import DATA from '../DATA/DATA';
 
 const DataSendState_Provider=(props)=>{
 
@@ -14,8 +14,13 @@ const DataSendState_Provider=(props)=>{
     useEffect(()=>{
         if(!dataSetter==""){
             console.log(dataSetter);
+            if (DATA[dataSetter.date]){
+                console.log("YES PRESENT ON DATA");
+            }
         }
     },[dataSetter])
+
+
 
 
 

@@ -6,41 +6,58 @@ import { TotalAmount } from "../SillyComponents/SillyComponent";
 import AddExpenseCard from "../AddExpenseCard/AddExpenseCard";
 import ItemCover from "../ItemCover/ItemCover";
 import Item from "../Item/Item";
-
+import DATA from "../../Context/DATA/DATA";
 
 // Contexts
 import AddExpenseCard_Context from "../../Context/AddExpenseCard_State_Context/AddExpenseCardContext";
 import DataSend_Context from "../../Context/DataSendState_Context/DataSendContext";
 
-
 function Transaction() {
   
+  //! For Open Close AddExpense Card
+  const context_addExpenseCard = useContext(AddExpenseCard_Context);
 
 
+  //! Generating New Data For DOM
+  // Keys
+  const NEW_DATA_KEYS=Object.keys(DATA)
+  // Data From Keys
+  const NEW_DATA_ARRAY=NEW_DATA_KEYS.map((value)=>{
+    return(
+      <ItemCover date={value} key={value}>
+        {
+          DATA[value].map((innerValue)=>{
+            return (
+              <Item
+              key={Math.random()}
+              data={{
+                name: innerValue.name,
+                date:  innerValue.date,
+                time:  innerValue.time,
+                price: innerValue.price,
+              }}
+              />
+            )
+          })
+        }
+      </ItemCover>
+    )
+  })
 
 
-
-  const context_addExpenseCard=useContext(AddExpenseCard_Context)
-
-
+  
   return (
     <>
       <AddHoverBtn />
 
-      {context_addExpenseCard.setAddCard_BOOL  &&  <AddExpenseCard/>}
-
-
+      {context_addExpenseCard.setAddCard_BOOL && <AddExpenseCard />}
 
       <FilterField />
 
       <TotalAmount />
 
+      {NEW_DATA_ARRAY}
 
-      <ItemCover date="2023-11-11">
-
-        <Item data={{name:"Poha",date:"2023-11-11",time:"02:50",price:"500"}} />
-      
-      </ItemCover>
 
     </>
   );
