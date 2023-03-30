@@ -42,31 +42,14 @@ function TitleWithIcon(props){
 //!==============InputFieldForAdd
 function InputFieldAddEdit(props){
 
-    // State To grab data when ever someone type something in the input fields
-    const[name,Fname]=useState("")
-    const[date,Fdate]=useState("")
-    const[time,Ftime]=useState("")
-    const[price,Fprice]=useState("")
-
-    //new object to sotore the data and pass as an object to Transactions 
-    let NewObject={
-        name:name,
-        date:date,
-        time:time,
-        price:price
-    }
-
-    // Send Data to Transection
-    if(props.checkIsbuttonClicked===true){props.grabDataOnButtonSubmit(NewObject)}
-
     return (
         <div className="InputFieldAddEdit-div">
-        <input className="InputFieldAddEdit-name" type="text" placeholder="Enter Name" onChange={(e)=>{Fname(e.target.value)}}  />
+        <input className="InputFieldAddEdit-name" type="text" placeholder="Enter Name"   />
             <div>
-                <input className="InputFieldAddEdit-date" type="date" onChange={(e)=>{Fdate(e.target.value)}} />
-                <input className="InputFieldAddEdit-time" type="time" onChange={(e)=>{Ftime(e.target.value)}}   />
+                <input className="InputFieldAddEdit-date" type="date"  />
+                <input className="InputFieldAddEdit-time" type="time"    />
             </div>
-        <input className="InputFieldAddEdit-price" type="number" onChange={(e)=>{Fprice(e.target.value)}}  />
+        <input className="InputFieldAddEdit-price" type="number" />
     </div>
     )
 }
