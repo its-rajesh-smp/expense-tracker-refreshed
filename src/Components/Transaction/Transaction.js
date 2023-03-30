@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Transaction.css";
 import FilterField from "../FilterField/FilterField";
 import AddHoverBtn from "../AddHoverBtn/AddHoverBtn";
@@ -7,16 +7,27 @@ import AddExpenseCard from "../AddExpenseCard/AddExpenseCard";
 import ItemCover from "../ItemCover/ItemCover";
 import Item from "../Item/Item";
 
+
+// Contexts
+import AddExpenseCard_Context from "../../Context/AddExpenseCard_State_Context/AddExpenseCardContext";
+import DataSend_Context from "../../Context/DataSendState_Context/DataSendContext";
+
+
 function Transaction() {
   
 
+
+
+
+
+  const context_addExpenseCard=useContext(AddExpenseCard_Context)
 
 
   return (
     <>
       <AddHoverBtn />
 
-      {/* <AddExpenseCard/> */}
+      {context_addExpenseCard.setAddCard_BOOL  &&  <AddExpenseCard/>}
 
 
 
