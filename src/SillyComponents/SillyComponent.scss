@@ -1,0 +1,55 @@
+//===================HeadingDiv--Start
+.Heading-div{
+    display: flex;
+}
+//===================HeadingDiv--End
+//====================TotalAmountDiv-Start
+.TotalAmount-Div{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+//====================TotalAmountDiv-End
+//====================TitleWithIcon-Start
+.TitleWithIcon-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    i{
+        cursor: pointer;
+    }
+
+}
+//====================TitleWithIcon-End
+//====================AddEditInputField-Start
+.InputFieldAddEdit-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .InputFieldAddEdit-name{
+        height: 35px;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .InputFieldAddEdit-date, .InputFieldAddEdit-time{
+        height: 35px;
+        padding-left: 15px;
+        padding-right: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: none;
+    }
+    .InputFieldAddEdit-price{
+        height: 35px;
+        width: 195px;
+        padding-left: 5px; 
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}
+//====================AddEditInputField-End

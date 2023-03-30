@@ -1,0 +1,21 @@
+.AddNew-div{
+    background-color:#DF2E38;
+    color: white;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 70px;
+    right: 90px;
+    box-shadow: 1px 1px 5px black;
+    user-select: none;
+
+}
+.AddNew-div:hover{
+    background-color:#a5363b;
+}
