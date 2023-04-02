@@ -6,17 +6,20 @@ import { TotalAmount } from "../SillyComponents/SillyComponent";
 import AddExpenseCard from "../AddExpenseCard/AddExpenseCard";
 import ItemCover from "../ItemCover/ItemCover";
 import Item from "../Item/Item";
+import ADDEDITCARD_CONTEXT from "../../Context/AddEditCard/AddEditCardContext"; 
+import { useContext } from "react";
+
 
 function Transaction() {
-  
-
+  // Context To Toggle AddExpenseCard
+  const context_AddExpenseCard=useContext(ADDEDITCARD_CONTEXT)
 
 
   return (
     <>
       <AddHoverBtn />
 
-      {/* <AddExpenseCard/> */}
+      {context_AddExpenseCard.TOGGLE_CARD_BOOL && <AddExpenseCard/>}
 
 
 

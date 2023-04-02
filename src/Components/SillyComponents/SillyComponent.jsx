@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import "./SillyComponent.css"
 
 
@@ -42,14 +42,15 @@ function TitleWithIcon(props){
 //!==============InputFieldForAdd
 function InputFieldAddEdit(props){
 
+
     return (
         <div className="InputFieldAddEdit-div">
-        <input className="InputFieldAddEdit-name" type="text" placeholder="Enter Name"   />
+        <input className="InputFieldAddEdit-name" type="text" placeholder="Enter Name" ref={props.refs.name}  />
             <div>
-                <input className="InputFieldAddEdit-date" type="date"  />
-                <input className="InputFieldAddEdit-time" type="time"    />
+                <input className="InputFieldAddEdit-date" type="date" ref={props.refs.date} />
+                <input className="InputFieldAddEdit-time" type="time"  ref={props.refs.time}  />
             </div>
-        <input className="InputFieldAddEdit-price" type="number" />
+        <input className="InputFieldAddEdit-price" type="number" ref={props.refs.price}/>
     </div>
     )
 }
