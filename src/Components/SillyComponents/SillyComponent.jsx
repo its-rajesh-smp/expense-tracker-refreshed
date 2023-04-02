@@ -48,37 +48,10 @@ function TitleWithIcon(props){
 //!==============InputFieldForAdd
 function InputFieldAddEdit(props){
 
-    const context_DataSend = useContext(DataSend_Context)
 
-
-    const name=useRef("")
-    const date=useRef("")
-    const time=useRef("")
-    const price=useRef("")
-
-    //Generating Data 
-    const NEW_DATA={
-        name:name.current.value,
-        date:date.current.value,
-        time:time.current.value,
-        price:price.current.value
-    }
-
-
-    // ! PROBLEM IS HERE
-    useEffect(()=>{
-        // If Button Is Clicked
-        if(context_DataSend.checkBtnClick_BOOL===true){
-
-            // Send Data
-            context_DataSend.dataSetter_FUNC(NEW_DATA)
-
-            // Make it false again to reuse
-            // Just because state values are never changed until we change them by state function
-            context_DataSend.checkBtnClick_FUNC(false)
-        }
-    },[context_DataSend.checkBtnClick_BOOL])
     
+
+
 
 
     return (

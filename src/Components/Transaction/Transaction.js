@@ -18,15 +18,19 @@ function Transaction() {
   const context_addExpenseCard = useContext(AddExpenseCard_Context);
 
 
+  // ! Linked With Storage State For Data
+  const CONTEXT_DATA=useContext(DataSend_Context)
+``
+
   //! Generating New Data For DOM
   // Keys
-  const NEW_DATA_KEYS=Object.keys(DATA)
+  const NEW_DATA_KEYS=Object.keys(CONTEXT_DATA.SET_DATA)
   // Data From Keys
   const NEW_DATA_ARRAY=NEW_DATA_KEYS.map((value)=>{
     return(
       <ItemCover date={value} key={value}>
         {
-          DATA[value].map((innerValue)=>{
+          CONTEXT_DATA.SET_DATA[value].map((innerValue)=>{
             return (
               <Item
               key={Math.random()}
@@ -46,6 +50,8 @@ function Transaction() {
 
 
   
+
+
   return (
     <>
       <AddHoverBtn />
