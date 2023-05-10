@@ -7,12 +7,23 @@ import AddExpenseCard from "../AddExpenseCard/AddExpenseCard";
 import ItemCover from "../ItemCover/ItemCover";
 import Item from "../Item/Item";
 import ADDEDITCARD_CONTEXT from "../../Context/AddEditCard/AddEditCardContext"; 
+import DATASETTER_CONTEXT from "../../Context/DATASETTER/DataSeterContext";
 import { useContext } from "react";
 
 
 function Transaction() {
   // Context To Toggle AddExpenseCard
   const context_AddExpenseCard=useContext(ADDEDITCARD_CONTEXT)
+         
+         
+  // Context To Get Data
+  const context_DataSetterState=useContext(DATASETTER_CONTEXT)
+
+
+ 
+
+
+
 
 
   return (
@@ -28,11 +39,8 @@ function Transaction() {
       <TotalAmount />
 
 
-      <ItemCover date="2023-11-11">
+      {context_DataSetterState.SETDATA}
 
-        <Item data={{name:"Poha",date:"2023-11-11",time:"02:50",price:"500"}} />
-      
-      </ItemCover>
 
     </>
   );

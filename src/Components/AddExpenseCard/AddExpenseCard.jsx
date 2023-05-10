@@ -38,7 +38,7 @@ function AddExpenseCard() {
       name: name.current.value,
       date: date.current.value,
       time: time.current.value,
-      price: price.current.value
+      price: Number(price.current.value)
     }
     // Send Data Object to DataSeterState
     context_dataSetter.GETDATA_FUNC(newObject)

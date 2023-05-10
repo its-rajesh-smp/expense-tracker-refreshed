@@ -3,7 +3,12 @@ import "./MainContainer.css";
 import Transaction from "../Transaction/Transaction";
 
 function MainContainer() {
-  return <div className="main_container">{<Transaction />}</div>;
+  return <div className="main_container">
+    
+
+    <Transaction />
+    
+    </div>;
 }
 
 export default MainContainer;
